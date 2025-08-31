@@ -10,6 +10,6 @@ public class ResponseBuilder {
 
     public static <T> ResponseEntity<ApiResponse<T>> error(String message, HttpStatus status) {
         return ResponseEntity.status(status)
-                .body(new ApiResponse<>(HttpStatus.OK.name(), null, message));
+                .body(new ApiResponse<>(status.name(), null, message));
     }
 }
