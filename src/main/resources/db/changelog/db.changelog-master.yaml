@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/2025-08-31-001-create-allowed-users-table.yaml
+  - include:
+      file: db/changelog/changes/2025-08-31-002-insert-initial-allowed-users.yaml
