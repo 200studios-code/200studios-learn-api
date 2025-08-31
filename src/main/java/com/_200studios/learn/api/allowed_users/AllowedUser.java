@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
 
 import java.time.Instant;
 
@@ -22,5 +23,6 @@ public class AllowedUser {
     @Enumerated(EnumType.STRING)
     private GlobalRole globalRole;
 
+    @Column(name = "created_at", updatable = false, insertable = false)
     private Instant createdAt;
 }
