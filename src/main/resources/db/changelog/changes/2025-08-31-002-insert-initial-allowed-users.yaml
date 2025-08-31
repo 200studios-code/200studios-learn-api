@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: carlos-talavera
+      changes:
+        - insert:
+            tableName: allowed_users
+            columns:
+              - column:
+                  name: email
+                  value: 200studios.info@gmail.com
+              - column:
+                  name: global_role
+                  value: ADMIN
+        - insert:
+            tableName: allowed_users
+            columns:
+              - column:
+                  name: email
+                  value: carloseduardorivera12@gmail.com
+              - column:
+                  name: global_role
+                  value: ADMIN
