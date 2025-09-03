@@ -1,4 +1,5 @@
 import { validate } from '@/shared/config/env.validation';
+import { PrismaService } from '@/shared/datasource/prisma/prisma.service';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
@@ -9,6 +10,6 @@ import { ConfigModule } from '@nestjs/config';
     }),
   ],
   controllers: [],
-  providers: [],
+  providers: [PrismaService],
 })
 export class AppModule {}
