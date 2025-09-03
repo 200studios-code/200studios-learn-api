@@ -17,6 +17,7 @@ export const ENV_VARIABLES_SCHEMA = z.object({
     .string()
     .regex(/\d{4,5}/)
     .nonempty(),
+  ALLOWED_USER_SECRET_KEY: z.string().nonempty(),
 });
 
 export type EnvVariables = z.infer<typeof ENV_VARIABLES_SCHEMA>;
