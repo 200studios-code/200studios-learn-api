@@ -7,3 +7,17 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model AllowedUser {
+  id        BigInt   @id @default(autoincrement())
+  email     String   @unique
+  globalRole GlobalRole @map("global_role")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("allowed_users")
+}
+
+enum GlobalRole {
+  ADMIN
+  STUDENT
+}
