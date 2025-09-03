@@ -1,5 +1,5 @@
 import { validate } from '@/shared/config/env.validation';
-import { PrismaService } from '@/shared/datasource/prisma/prisma.service';
+import { PrismaModule } from '@/shared/datasource/prisma/prisma.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
@@ -8,8 +8,9 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({
       validate,
     }),
+    PrismaModule,
   ],
   controllers: [],
-  providers: [PrismaService],
+  providers: [],
 })
 export class AppModule {}
