@@ -8,6 +8,7 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot({
       validate,
+      isGlobal: true,
     }),
     PrismaModule,
     AllowedUserModule,
