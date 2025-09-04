@@ -20,6 +20,9 @@ export const ENV_VARIABLES_SCHEMA = z.object({
   ALLOWED_USER_SECRET_KEY: z.string().nonempty(),
   BACKEND_DOMAIN: z.string().nonempty(),
   FRONTEND_DOMAIN: z.string().nonempty(),
+  SUPERTOKENS_CONNECTION_URI: z.string().nonempty(),
+  SUPERTOKENS_API_KEY: z.string().nonempty(),
+  SUPERTOKENS_APP_NAME: z.string().nonempty(),
 });
 
 export type EnvVariables = z.infer<typeof ENV_VARIABLES_SCHEMA>;
